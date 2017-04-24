@@ -24,7 +24,6 @@ public class CSVreader {
     {
     	try {
         	input = new BufferedReader(new FileReader(filename));
-        	output = new BufferedWriter(new FileWriter("characteroutput.txt"));
 
             while ((line = input.readLine()) != null) {
             	if (columns == 0)
@@ -32,7 +31,6 @@ public class CSVreader {
             		columns = itemCount(line.toString());
             	}
             	rows++;
-                output.write(line);
             }
         } 
     	catch (IOException e)
