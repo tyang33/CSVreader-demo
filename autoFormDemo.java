@@ -10,7 +10,7 @@ public class autoFormDemo {
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		System.setProperty("webdriver.chrome.driver", "/selenium/chromedriver.exe");
-		//System.setProperty("webdriver.gecko.driver", "/selenium/geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", "/selenium/geckodriver.exe");
 
 		WebDriver driver = new ChromeDriver();
 		//WebDriver driver = new FirefoxDriver();
@@ -22,12 +22,12 @@ public class autoFormDemo {
 		//Puts an Implicit wait, Will wait for 10 seconds before throwing exception
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		      
-		//hard coded path to html form
-		driver.navigate().to("file:///E:/workspace/AutoFormDemo/testForm.html");
-
 		
 		for (int i = 0; i < r.getRows(); i ++)
 		{
+			//hard coded path to html form
+			driver.navigate().to("file:///E:/workspace/AutoFormDemo/testForm.html");
+
 			for (int j = 0; j < r.getColumns(); j++)
 			{
 				switch (j) {
