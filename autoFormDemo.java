@@ -18,15 +18,14 @@ public class autoFormDemo {
 		//hard coded path to csv file.
 		CSVreader r = new CSVreader("data.csv");
 		String [][] data = r.getData();
-	
-		//Puts an Implicit wait, Will wait for 10 seconds before throwing exception
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		      
 		
 		for (int i = 0; i < r.getRows(); i ++)
 		{
 			//hard coded path to html form
 			driver.navigate().to("file:///E:/workspace/AutoFormDemo/testForm.html");
+			//Puts an Implicit wait, Will wait for 10 seconds before throwing exception
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 			for (int j = 0; j < r.getColumns(); j++)
 			{
